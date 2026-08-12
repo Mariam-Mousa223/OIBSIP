@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق الآلة الحاسبة</title>
+    <link rel="stylesheet" href="Calculator.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <!-- شاشة عرض المدخلات والنتائج -->
+        <div class="display">
+            <div id="expression" class="expression"></div>
+            <div id="result" class="result">0</div>
+        </div>
+
+        <!-- شبكة تخطيط الأزرار باستخدام CSS Grid -->
+        <div class="buttons-grid">
+            <button class="btn btn-action" data-action="clear">C</button>
+            <button class="btn btn-action" data-action="backspace">⌫</button>
+            <button class="btn btn-operator" data-op="/">÷</button>
+            <button class="btn btn-operator" data-op="*">×</button>
+
+            <button class="btn btn-num" data-num="9">9</button>
+            <button class="btn btn-num" data-num="8">8</button>
+            <button class="btn btn-num" data-num="7">7</button>
+            <button class="btn btn-operator" data-op="-">-</button>
+
+            <button class="btn btn-num" data-num="6">6</button>
+            <button class="btn btn-num" data-num="5">5</button>
+            <button class="btn btn-num" data-num="4">4</button>
+            <button class="btn btn-operator" data-op="+">+</button>
+
+            <button class="btn btn-num" data-num="3">3</button>
+            <button class="btn btn-num" data-num="2">2</button>
+            <button class="btn btn-num" data-num="1">1</button>
+            <button class="btn btn-equal" data-action="equals">=</button>
+
+            <button class="btn btn-num btn-zero" data-num="0">0</button>
+            <button class="btn btn-num" data-num=".">.</button>
+        </div>
+    </div>
+
+    <script src="Calculator.js"></script>
+</body>
+</html>
