@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #162238; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 550px;
+}
+
+h1 {
+    text-align: center;
+    color: #162238;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+/* نموذج الإدخال */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #0b6197;
+}
+
+.btn-add {
+    padding: 12px 20px;
+    background-color: #0b6197;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #084972;
+}
+
+/* أقسام القوائم */
+.list-section {
+    margin-bottom: 22px;
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.list-header h2 {
+    font-size: 1.15rem;
+    color: #334155;
+}
+
+/* العدادات (المؤشرات) */
+.badge {
+    background-color: #e2e8f0;
+    color: #475569;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.badge-success {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+/* أسلوب عرض المهام */
+.task-list {
+    list-style: none;
+}
+
+.task-item {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.task-text {
+    font-size: 0.95rem;
+    color: #1e293b;
+    word-break: break-word;
+    flex: 1;
+}
+
+.completed-text {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+/* أزرار التحكم في المهمة */
+.task-actions {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-sm {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.btn-sm:hover {
+    opacity: 0.85;
+}
+
+.btn-complete { background-color: #16a34a; color: white; }
+.btn-undo { background-color: #ca8a04; color: white; }
+.btn-edit { background-color: #2563eb; color: white; }
+.btn-delete { background-color: #dc2626; color: white; }
+
+/* الطابع الزمني الإضافي */
+.task-time {
+    font-size: 0.75rem;
+    color: #64748b;
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 4px;
+}
+
+/* رسائل القائمة الفارغة */
+.empty-msg {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    padding: 12px 0;
+    display: none;
+}
