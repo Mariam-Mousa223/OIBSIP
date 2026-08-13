@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>نظام تسجيل الدخول والمصادقة</title>
+    <title>Login & Authentication</title>
     <link rel="stylesheet" href="LoginAS.css">
 </head>
 <body>
@@ -11,8 +11,8 @@
     <div class="auth-card">
         <!-- أزرار التنقل بين التسجيل والدخول -->
         <div class="tabs">
-            <button id="tabRegister" class="tab-btn active">إنشاء حساب</button>
-            <button id="tabLogin" class="tab-btn">تسجيل الدخول</button>
+            <button id="tabRegister" class="tab-btn active">Register</button>
+            <button id="tabLogin" class="tab-btn">Login</button>
         </div>
 
         <!-- رسائل الخطأ والنجاح العامة -->
@@ -20,54 +20,57 @@
 
         <!-- نموذج إنشاء حساب (Register) -->
         <form id="registerForm" class="auth-form active">
-            <h2>إنشاء حساب جديد</h2>
+            <h2>Create New Account</h2>
             
             <div class="form-group">
-                <label for="regUsername">اسم المستخدم:</label>
-                <input type="text" id="regUsername" placeholder="أدخل اسم المستخدم...">
+                <label for="regUsername">Username:</label>
+                <input type="text" id="regUsername" placeholder="Enter Username...">
             </div>
 
             <div class="form-group">
-                <label for="regEmail">البريد الإلكتروني:</label>
+                <label for="regEmail">Email Address:</label>
                 <input type="email" id="regEmail" placeholder="example@mail.com">
             </div>
 
             <div class="form-group">
-                <label for="regPassword">كلمة المرور:</label>
-                <input type="password" id="regPassword" placeholder="8 أحرف ورقم واحد على الأقل...">
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" placeholder="8 Letters and at Least one number...">
             </div>
 
-            <button type="submit" class="btn-submit">تسجيل</button>
+            <button type="submit" class="btn-submit">Register</button>
         </form>
 
         <!-- نموذج تسجيل الدخول (Login) -->
         <form id="loginForm" class="auth-form">
-            <h2>تسجيل الدخول</h2>
+            <h2>Sign In</h2>
 
             <div class="form-group">
-                <label for="loginIdentifier">اسم المستخدم أو البريد الإلكتروني:</label>
-                <input type="text" id="loginIdentifier" placeholder="أدخل اسم المستخدم أو البريد...">
+                <label for="loginIdentifier">Username or Email:</label>
+                <input type="text" id="loginIdentifier" placeholder="Enter Username or Email...">
             </div>
 
             <div class="form-group">
-                <label for="loginPassword">كلمة المرور:</label>
-                <input type="password" id="loginPassword" placeholder="أدخل كلمة المرور...">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" placeholder="Enter Password...">
             </div>
 
-            <button type="submit" class="btn-submit">تسجيل الدخول</button>
+            <button type="submit" class="btn-submit">Sign In</button>
         </form>
 
         <!-- الصفحة المحمية (لوحة التحكم) -->
         <div id="dashboard" class="dashboard-view">
-            <h2>مرحباً بك في لوحة التحكم المحمية! 👋</h2>
-            <p>لقد قمت بتسجيل الدخول بنجاح إلى الصفحة المحمية.</p>
+            <h2>Welcome to Your Dashboard! 👋</h2>
+            <p>You have successfully logged in.</p>
             <div class="user-info">
-                <strong>المستخدم الحالي:</strong> <span id="dashUser">--</span>
+                <strong>Current User:</strong> <span id="dashUser">--</span>
             </div>
-            <button id="btnLogout" class="btn-logout">تسجيل الخروج</button>
+            <button id="btnLogout" class="btn-logout">Logout</button>
         </div>
     </div>
 
     <script src="LoginAS.js"></script>
 </body>
 </html>
+
+
+
