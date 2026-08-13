@@ -25,9 +25,8 @@ The core concept of **Platform** is to offer hands-on, practical tech education 
 
 ## 🛠️ Technologies Used
 
-- **HTML5:** Semantic structural layout and accessibility markup.
-- **CSS3:** Custom styles, layout structuring, glowing UI effects, and modern color themes.
-- **JavaScript (JS):** Dynamic interactivity and smooth navigation scrolling.
+- **HTML5:** Semantic structural layout and page hierarchy.
+- **CSS3:** Custom styling, layout design, visual hover effects, and modern color themes.
 
 ---
 
@@ -35,7 +34,6 @@ The core concept of **Platform** is to offer hands-on, practical tech education 
 
 ```text
 .
-├── index.html        # Main HTML file containing the structure
-├── style.css         # Styling, layout, and visual effects
-├── script.js        # Dynamic features and event handling
-└── README.md         # Project documentation
+├── LandingP.html      # Main HTML file containing structure & content
+├── LandingP.css       # Custom styles, responsive design, and visuals
+└── README.md          # Project documentation
