@@ -1,43 +1,46 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تطبيق قائمة المهام اليومية</title>
+    <title>Daily To-Do List App</title>
     <link rel="stylesheet" href="WebApp.css">
 </head>
 <body>
 
     <div class="app-card">
-        <h1>قائمة المهام اليومية</h1>
+        <h1>Daily To-Do List</h1>
 
         <!-- حقل الإدخال وزر إضافة مهمة -->
         <form id="todoForm" class="input-group">
-            <input type="text" id="taskInput" placeholder="أدخل مهمة جديدة هنا..." autocomplete="off">
-            <button type="submit" class="btn-add">إضافة مهمة</button>
+            <input type="text" id="taskInput" placeholder="New task ...enter task..." autocomplete="off">
+            <button type="submit" class="btn-add">Add Task</button>
         </form>
 
         <!-- قائمة المهام المعلقة -->
         <div class="list-section">
             <div class="list-header">
-                <h2>المهام المعلقة</h2>
-                <span id="pendingCount" class="badge">0 معلقة</span>
+                <h2>Pending Tasks</h2>
+                <span id="pendingCount" class="badge">0 Pending</span>
             </div>
             <ul id="pendingList" class="task-list"></ul>
-            <div id="pendingEmpty" class="empty-msg">لا يوجد مهام معلقة حالياً 🎉</div>
+            <div id="pendingEmpty" class="empty-msg">No pending tasks at the moment 🎉</div>
         </div>
 
         <!-- قائمة المهام المكتملة -->
         <div class="list-section">
             <div class="list-header">
-                <h2>المهام المكتملة</h2>
-                <span id="completedCount" class="badge badge-success">0 مكتملة</span>
+                <h2>Completed Tasks</h2>
+                <span id="completedCount" class="badge badge-success">0 Completed</span>
             </div>
             <ul id="completedList" class="task-list"></ul>
-            <div id="completedEmpty" class="empty-msg">لم يتم إكمال أي مهمة بعد ⏳</div>
+            <div id="completedEmpty" class="empty-msg">No tasks have been completed yet ⏳</div>
         </div>
     </div>
 
     <script src="WebApp.js"></script>
 </body>
 </html>
+
+
+
