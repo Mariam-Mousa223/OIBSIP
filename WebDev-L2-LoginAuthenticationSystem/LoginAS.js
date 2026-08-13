@@ -48,14 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // التحقق الأساسي من صحة النموذج (عدم إرسال نماذج فارغة)
         if (!username || !email || !password) {
-            showAlert('يرجى ملء كافة الحقول المطلوبة.', 'danger');
+            showAlert('Please fill in all required fields.', 'danger');
             return;
         }
 
         // التحقق من صحة كلمة المرور: 8 أحرف ورقم واحد على الأقل
         const passwordRegex = /^(?=.*[0-9])(?=.*[a-zA-Z\u0600-\u06FF]).{8,}$/;
         if (!password.match(passwordRegex)) {
-            showAlert('كلمة المرور يجب أن لا تقل عن 8 أحرف وتحتوي على رقم واحد على الأقل.', 'danger');
+            showAlert('Password must be at least 8 characters long and contain at least one number.', 'danger');
             return;
         }
 
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // التحقق من اسم المستخدم/البريد المكرر
         const isUserExists = users.some(user => user.username === username || user.email === email);
         if (isUserExists) {
-            showAlert('اسم المستخدم أو البريد الإلكتروني موجود بالفعل.', 'danger');
+            showAlert('Username or email is already registered!.', 'danger');
             return;
         }
 
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         localStorage.setItem('registered_users', JSON.stringify(users));
-        showAlert('تم إنشاء الحساب بنجاح! يمكنك تسجيل الدخول الآن.', 'success');
+        showAlert('Account created successfully! You can login now.', 'success');
         
         registerForm.reset();
         setTimeout(() => switchTab('login'), 1200);
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // التحقق من النماذج الفارغة
         if (!identifier || !password) {
-            showAlert('يرجى كتابة البيانات كاملة.', 'danger');
+            showAlert('Please enter your login credentials.', 'danger');
             return;
         }
 
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // معالجة بيانات الاعتماد غير الصحيحة دون الكشف عن الحقل الخاطئ تحديداً
         if (!validUser) {
-            showAlert('بيانات الاعتماد غير صحيحة. يرجى التأكد من اسم المستخدم/البريد وكلمة المرور.', 'danger');
+            showAlert('Invalid username/email or password.', 'danger');
             return;
         }
 
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnLogout.addEventListener('click', () => {
         localStorage.removeItem('logged_in_user');
         checkAuthStatus();
-        showAlert('تم تسجيل الخروج بنجاح.', 'success');
+        showAlert('Logged out successfully.', 'success');
     });
 
     function checkAuthStatus() {
