@@ -1,46 +1,45 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع تحويل درجة الحرارة</title>
+    <title>Temperature Converter</title>
     <link rel="stylesheet" href="Temperature.css">
 </head>
 <body>
 
     <div class="converter-card">
-        <h1>مُحوِّل درجات الحرارة</h1>
+        <h1>Temperature Converter 🌡</h1>
         <!-- الجملة الإرشادية الجديدة -->
-        <p class="subtitle">أدخل درجة الحرارة واختر الوحدة للحصول على التحويل الفوري</p>
-
+        <p class="subtitle">Enter the temperature and select the unit for instant conversion.</p>
         <div class="form-group">
-            <label for="tempInput">درجة الحرارة:</label>
-            <input type="number" id="tempInput" step="any" placeholder="أدخل القيمة هنا...">
+            <label for="tempInput">Temperature Value:</label>
+            <input type="number" id="tempInput" step="any" placeholder="Enter value here...">
             <div id="errorText" class="error-message"></div>
         </div>
 
         <div class="form-group">
-            <label for="unitSelect">وحدة الإدخال:</label>
+            <label for="unitSelect">Input Unit:</label>
             <select id="unitSelect">
-                <option value="celsius">مئوية (°C)</option>
-                <option value="fahrenheit">فهرنهايت (°F)</option>
-                <option value="kelvin">كلفن (K)</option>
+                <option value="celsius">Celsius (°C)</option>
+                <option value="fahrenheit">Fahrenheit (°F)</option>
+                <option value="kelvin">Kelvin (K)</option>
             </select>
         </div>
 
-        <button id="convertBtn" class="btn-convert">تحويل الآن</button>
+        <button id="convertBtn" class="btn-convert">Convert Now</button>
 
         <div class="results-section">
             <div class="result-item">
-                <span>سيليزيوس:</span>
-                <span id="celsiusResult" class="result-value">-- C°</span>
+                <span>Celsius:</span>
+                <span id="celsiusResult" class="result-value">-- °C</span>
             </div>
             <div class="result-item">
-                <span>فهرنهايت:</span>
-                <span id="fahrenheitResult" class="result-value">-- F°</span>
+                <span>Fahrenheit:</span>
+                <span id="fahrenheitResult" class="result-value">-- °F</span>
             </div>
             <div class="result-item">
-                <span>كلفن:</span>
+                <span>Kelvin:</span>
                 <span id="kelvinResult" class="result-value">-- K</span>
             </div>
         </div>
@@ -49,3 +48,6 @@
     <script src="Temperature.js"></script>
 </body>
 </html>
+
+
+
