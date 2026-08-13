@@ -16,7 +16,7 @@ function convertTemperature() {
     errorText.textContent = '';
 
     if (rawValue === '' || isNaN(value)) {
-        showError('برجاء إدخال قيمة رقمية صحيحة.');
+        showError('Please enter a valid numeric value.');
         clearResults();
         return;
     }
@@ -32,7 +32,7 @@ function convertTemperature() {
     }
 
     if (celsius < -273.15) {
-        showError('القيمة أدنى من الصفر المطلق (-273.15°C / 0K). لا يمكن إجراء التحويل.');
+        showError('Temperature cannot be below absolute zero (-273.15°C / 0K).');
         clearResults();
         return;
     }
