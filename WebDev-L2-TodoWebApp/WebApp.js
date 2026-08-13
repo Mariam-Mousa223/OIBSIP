@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: Date.now(),
             text: text,
             completed: false,
-            createdAt: new Date().toLocaleString('ar-EG', { dateStyle: 'short', timeStyle: 'short' }),
+            createdAt: new Date().toLocaleString('en-US', { dateStyle: 'short', timeStyle: 'short' }),
             completedAt: null
         };
 
@@ -53,12 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="task-main">
                         <span class="task-text">${escapeHtml(task.text)}</span>
                         <div class="task-actions">
-                            <button class="btn-sm btn-complete" onclick="toggleTask(${task.id})">مكتملة ✓</button>
-                            <button class="btn-sm btn-edit" onclick="editTask(${task.id})">تعديل ✏️</button>
-                            <button class="btn-sm btn-delete" onclick="deleteTask(${task.id})">حذف 🗑️</button>
+                            <button class="btn-sm btn-complete" onclick="toggleTask(${task.id})">Complete ✓</button>
+                            <button class="btn-sm btn-edit" onclick="editTask(${task.id})">Edit ✏️</button>
+                            <button class="btn-sm btn-delete" onclick="deleteTask(${task.id})">Delete 🗑️</button>
                         </div>
                     </div>
-                    <div class="task-time">أُضيفت في: ${task.createdAt}</div>
+                    <div class="task-time">Added: ${task.createdAt}</div>
                 `;
                 pendingList.appendChild(li);
             } else {
@@ -67,20 +67,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="task-main">
                         <span class="task-text completed-text">${escapeHtml(task.text)}</span>
                         <div class="task-actions">
-                            <button class="btn-sm btn-undo" onclick="toggleTask(${task.id})">إعادة ↩️</button>
-                            <button class="btn-sm btn-edit" onclick="editTask(${task.id})">تعديل ✏️</button>
-                            <button class="btn-sm btn-delete" onclick="deleteTask(${task.id})">حذف 🗑️</button>
+                            <button class="btn-sm btn-undo" onclick="toggleTask(${task.id})">Undo ↩️</button>
+                            <button class="btn-sm btn-edit" onclick="editTask(${task.id})">Edit ✏️</button>
+                            <button class="btn-sm btn-delete" onclick="deleteTask(${task.id})">Delete 🗑️</button>
                         </div>
                     </div>
-                    <div class="task-time">أُضيفت: ${task.createdAt} | أُكملت: ${task.completedAt}</div>
+                    <div class="task-time">Added: ${task.createdAt} | Completed: ${task.completedAt}</div>
                 `;
                 completedList.appendChild(li);
             }
         });
 
         // تحديث المؤشرات بالأرقام "X معلقة" و "Y مكتملة"
-        pendingCount.textContent = `${pendingNum} معلقة`;
-        completedCount.textContent = `${completedNum} مكتملة`;
+        pendingCount.textContent = `${pendingNum} Pending`;
+        completedCount.textContent = `${completedNum} Completed`;
 
         // إظهار وإخفاء رسائل الحالة الفارغة
         pendingEmpty.style.display = pendingNum === 0 ? 'block' : 'none';
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return {
                     ...task,
                     completed: nextStatus,
-                    completedAt: nextStatus ? new Date().toLocaleString('ar-EG', { dateStyle: 'short', timeStyle: 'short' }) : null
+                    completedAt: nextStatus ? new Date().toLocaleString('en-US', { dateStyle: 'short', timeStyle: 'short' }) : null
                 };
             }
             return task;
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const task = tasks.find(t => t.id === id);
         if (!task) return;
 
-        const newText = prompt('تعديل نص المهمة:', task.text);
+        const newText = prompt('Edit task text:', task.text);
         if (newText !== null && newText.trim() !== '') {
             task.text = newText.trim();
             saveAndRender();
@@ -129,3 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // الرسم الأولي عند تشغيل التطبيق
     renderTasks();
 });
+
+
+
+
