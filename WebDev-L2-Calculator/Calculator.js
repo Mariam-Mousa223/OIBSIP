@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // منع القسمة على صفر
         if (operator === '÷' && num2 === 0) {
-            resultDisplay.textContent = 'خطأ: قسمة على صفر';
+            resultDisplay.textContent = 'Error:Cannot divide by zero';
             expressionDisplay.textContent = '';
             resetState();
             return;
