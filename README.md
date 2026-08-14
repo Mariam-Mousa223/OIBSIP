@@ -6,7 +6,7 @@ Welcome to my repository for the Oasis Infobyte Web Development Internship. This
 
 ### Level 1 Tasks
 * **WebDev-L1-LandingPage:** Smart Learning Platform Landing Page | [Live Demo](https://mariam-mousa223.github.io/OIBSIP/WebDev-L1-LandingPage/)
-* **WebDev-L1-Portfolio:** Personal Portfolio Website | [Live Demo](https://mariam-mousa223.github.io/OIBSIP/WebDev-L1-Portfolio/)
+* **WebDev-L1-Portfolio:** Personal Portfolio Website | [Live Demo](https://mariam-mousa223.github.io/OIBSIP/WebDev-L1-Portfolio/Portfolio.html)
 * **WebDev-L1-TemperatureConverter:** Temperature Converter Utility | [Live Demo](https://mariam-mousa223.github.io/OIBSIP/WebDev-L1-TemperatureConverter/)
 
 ### Level 2 Tasks
